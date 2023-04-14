@@ -88,13 +88,18 @@ h6{
     font-size: clamp(1rem,1.2vw,2rem);
 }
 
-h6 img{
-    width: 8%;
-}
-
 header{
     height: 100vh;
     padding:30px;
+}
+
+header article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+    width: 60%;
 }
 
 header article p{
@@ -111,17 +116,6 @@ header a{
     color: var(--pink);
 }
 
-
-
-header article{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 80%;
-    width: 60%;
-}
-
 .header-img,.header-person{
     width:60%;
     top:0;
@@ -134,7 +128,6 @@ header article{
     animation: gravity 1s infinite alternate;
 }
 
-
 nav{
     padding:0 45px;
 }
@@ -143,12 +136,6 @@ nav{
     width: 30px;
     position: fixed;
 }
-
-
-.weeks-div{
-    width: 1%;
-}
-
 
 .idea-sec{
     display:flex;
@@ -167,10 +154,31 @@ nav{
 /* ### WEEKS SEC ### */
 
 .weeks-sec{
-    height: min-100vh;   
-    padding:5vh 12vw;
+    min-height: 50vh;   
+    padding: 5vh 12vw;
 }
 
+.weeks-sec article{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    min-height: 50vh;
+    width: 100%;
+    align-items: center;
+}
+
+.weeks-div{
+    width: 80%;
+    height: 20%;
+    margin:auto;
+    display: flex;
+}
+
+.weeks-div p{
+    margin-top:10px;
+    font-size: clamp(.8rem,1.2vw,1.6rem);
+    line-height: clamp(2rem,3vh,3rem);
+}
 
 .weeks-div img{
     width: 50px;
@@ -184,79 +192,12 @@ nav{
     width:70px;
 }
 
-.weeks-sec article{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    min-height: 50vh;
-    width: 100%;
-    align-items: center;
-}
-
-
-.weeks-div p{
-    margin-top:10px;
-    font-size: clamp(.8rem,1.2vw,1.6rem);
-    line-height: clamp(2rem,3vh,3rem);
-
-}
-
-.weeks-div h6{
-    font-size: clamp(1rem,1.2vw,2rem);
-    display: inline-block;
-
-
-}
-
-
-
 .weeks-sec h5{
     width: 50%;
 }
 
-.weeks-div{
-    width: 80%;
-    height: 20%;
-    margin:auto;
-    display: flex;
-}
 
-
-
-/* ### REPEAT SECTION ### */
-
-
-.repeat-sec{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin:50px 0 100px 0;
-    gap:10%;
-}
-
-
-.repeat-sec article{
-    width: 30%;
-}
-
-
-
-.repeat-sec h6{
-    margin:30px 0;
-}
-
-.repeat-sec p{
-    font-size: clamp(1rem,1.2vw,2rem);
-}
-
-footer{
-    padding:0 0 30px 15vw;
-}
-
-footer img{
-    width: 1%;
-}
-
+/* #### ARE YOU READY? #### */
 
 .rdy-art{
     display: flex;
@@ -276,6 +217,40 @@ footer img{
     font-size: clamp(1rem,1.2vw,2rem);
     width: 40%;
 }
+
+
+/* ### REPEAT SECTION ### */
+
+
+.repeat-sec{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:50px 0 100px 0;
+    gap:10%;
+}
+
+
+.repeat-sec article{
+    width: 30%;
+}
+
+.repeat-sec h6{
+    margin:30px 0;
+}
+
+.repeat-sec p{
+    font-size: clamp(1rem,1.2vw,2rem);
+}
+
+footer{
+    padding:0 0 30px 15vw;
+}
+
+footer img{
+    width: 1%;
+}
+
 
 /* ### MEDIA QUERY ### */
 
