@@ -1,0 +1,319 @@
+@font-face {
+    font-family: Roboto;
+    src: url(./font/Roboto-Regular.ttf);
+}
+
+
+@keyframes gravity {
+    100%{
+        transform: translate(-5px,20px);
+    }    
+}
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --pink: #ff3571;
+    --white: #fff;
+    --grey:#dddddd;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "Roboto",Arial, Helvetica, sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+main{
+    padding: 100px 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    min-height:10vh;
+    margin-top:50px;
+}
+
+input[type="submit"]{
+    background-color: var(--pink);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    min-width: 10vw;
+    margin:auto;
+}
+
+input[type="email"]{
+    width:30vw;
+    height: 50px;
+    text-align: center;
+    margin-bottom:50px;
+    color:var(--grey);
+}
+
+
+h1{
+    font-size: clamp(3rem,4vw,8rem);
+    width: 70%;
+}
+
+h4{
+    color:var(--grey);
+    font-size: clamp(3rem,3vw,6rem);
+    margin-bottom:30px;
+}
+
+h5{
+    font-size: clamp(3.5rem,3vw,6rem);
+    width:20%;
+}
+
+h6{
+    font-size: clamp(1rem,1.2vw,2rem);
+}
+
+h6 img{
+    width: 8%;
+}
+
+header{
+    height: 100vh;
+    padding:30px;
+}
+
+header article p{
+    font-size: clamp(1rem,1.2vw,2rem);
+    width: 50%;
+}
+
+
+header a{
+    text-decoration: none;
+    font-size: clamp(1rem,1.2vw,2rem);
+    width: 50%;
+    margin-left:15vw;
+    color: var(--pink);
+}
+
+
+
+header article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+    width: 60%;
+}
+
+.header-img,.header-person{
+    width:60%;
+    top:0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.header-person{
+    animation: gravity 1s infinite alternate;
+}
+
+
+nav{
+    padding:0 45px;
+}
+
+.logo{
+    width: 30px;
+    position: fixed;
+}
+
+
+.weeks-div{
+    width: 1%;
+}
+
+
+.idea-sec{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:60vh;
+    gap:10%;
+}
+
+.idea-sec p{
+    width: 45%;
+    font-size: clamp(1.5rem,1.6vw,2.5rem);
+    margin-top:50px;
+}
+
+/* ### WEEKS SEC ### */
+
+.weeks-sec{
+    height: min-100vh;   
+    padding:5vh 12vw;
+}
+
+
+.weeks-div img{
+    width: 50px;
+    float:right;
+    padding-right: 10px;
+    margin-top:-10px;
+}
+
+
+.weeks-div .fix-img-width{
+    width:70px;
+}
+
+.weeks-sec article{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    min-height: 50vh;
+    width: 100%;
+    align-items: center;
+}
+
+
+.weeks-div p{
+    margin-top:10px;
+    font-size: clamp(.8rem,1.2vw,1.6rem);
+    line-height: clamp(2rem,3vh,3rem);
+
+}
+
+.weeks-div h6{
+    font-size: clamp(1rem,1.2vw,2rem);
+    display: inline-block;
+
+
+}
+
+
+
+.weeks-sec h5{
+    width: 50%;
+}
+
+.weeks-div{
+    width: 80%;
+    height: 20%;
+    margin:auto;
+    display: flex;
+}
+
+
+
+/* ### REPEAT SECTION ### */
+
+
+.repeat-sec{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:50px 0 100px 0;
+    gap:10%;
+}
+
+
+.repeat-sec article{
+    width: 30%;
+}
+
+
+
+.repeat-sec h6{
+    margin:30px 0;
+}
+
+.repeat-sec p{
+    font-size: clamp(1rem,1.2vw,2rem);
+}
+
+footer{
+    padding:0 0 30px 15vw;
+}
+
+footer img{
+    width: 1%;
+}
+
+
+.rdy-art{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;    
+    min-height:20vh
+}
+
+.rdy-art h5{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.rdy-art p{
+    font-size: clamp(1rem,1.2vw,2rem);
+    width: 40%;
+}
+
+/* ### MEDIA QUERY ### */
+
+/* ##### 500px ##### */
+@media only screen and (max-width:500px){
+
+    .header-img,.header-person{
+        width: 50%;
+    }
+
+    header article,h1{
+        width: 100%;
+    }
+}
+
+
+/* ##### 800px ##### */
+@media only screen and (max-width:800px) {
+
+    .weeks-sec article{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+    
+    .weeks-sec h5{
+        width: 100%;
+    }
+
+    .weeks-div p{
+        line-height: normal;
+    }
+
+    .repeat-sec{
+        flex-direction: column;
+    }
+
+    .repeat-sec article{
+        width: 60%;
+        text-align: center;
+    }
+
+    footer img{
+        width:5%
+    }   
+}
+
